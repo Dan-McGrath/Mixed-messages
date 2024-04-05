@@ -11,9 +11,15 @@ const dadJokes = [
   "If a child refuses to nap, are they guilty of resisting a rest?",
 ];
 
+const energyLevel = ["High", "Blah", "low"];
+
+const advice = ["Get some sleep!", "Eat some food!", "Drink some coffee."];
+
+let message = [];
+
 const getJoke = (arr) => {
   let randIndx = Math.floor(Math.random() * arr.length - 1);
-  return console.log(arr[randIndx]);
+  return `Here's a joke to keep you going: ${arr[randIndx]}`;
 };
 
 getJoke(dadJokes);
