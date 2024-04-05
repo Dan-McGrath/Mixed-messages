@@ -10,3 +10,10 @@ const dadJokes = [
   "Shout out to my fingers. I can count on all of them.",
   "If a child refuses to nap, are they guilty of resisting a rest?",
 ];
+
+const getJoke = (arr) => {
+  let randIndx = Math.floor(Math.random() * arr.length - 1);
+  return console.log(arr[randIndx]);
+};
+
+getJoke(dadJokes);
