@@ -17,18 +17,23 @@ const advice = ["Get some sleep!", "Eat some food!", "Drink some coffee."];
 
 let message = [];
 
+const getRandIndx = (arrLength) => {
+  let randIndx = Math.floor(Math.random() * arrLength);
+  return randIndx;
+};
+
 const getJoke = (arr) => {
-  let randIndx = Math.floor(Math.random() * arr.length - 1);
+  let randIndx = getRandIndx(arr.length);
   return `Here's a joke to keep you going: ${arr[randIndx]}`;
 };
 
 const getEnergyLevel = (arr) => {
-  let randIndx = Math.floor(Math.random() * arr.length - 1);
+  let randIndx = getRandIndx(arr.length);
   return `Your energy level is: ${arr[randIndx]}`;
 };
 
 const getAdvice = (arr) => {
-  let randIndx = Math.floor(Math.random() * arr.length - 1);
+  let randIndx = getRandIndx(arr.length);
   return `You should: ${arr[randIndx]}`;
 };
 
