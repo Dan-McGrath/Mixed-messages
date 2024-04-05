@@ -11,7 +11,7 @@ const dadJokes = [
   "If a child refuses to nap, are they guilty of resisting a rest?",
 ];
 
-const energyLevel = ["High", "Blah", "low"];
+const energyLevel = ["High", "Blah", "Low"];
 
 const advice = ["Get some sleep!", "Eat some food!", "Drink some coffee."];
 
@@ -29,7 +29,7 @@ const getJoke = (arr) => {
 
 const getEnergyLevel = (arr) => {
   let randIndx = getRandIndx(arr.length);
-  return `Your energy level is: ${arr[randIndx]}`;
+  return arr[randIndx];
 };
 
 const getAdvice = (arr) => {
@@ -37,4 +37,17 @@ const getAdvice = (arr) => {
   return `You should: ${arr[randIndx]}`;
 };
 
-getJoke(dadJokes);
+const createMessage = () => {
+  const energy = getEnergyLevel(energyLevel);
+  if (energy === "High") {
+    message.push(`Your energy level is: ${energy}`);
+    message.push(getJoke(dadJokes));
+  } else {
+    message.push(`Your energy level is: ${energy}`);
+    message.push(getJoke(dadJokes));
+    message.push(getAdvice(advice));
+  }
+  return console.log(message.join("\n"));
+};
+
+createMessage();
