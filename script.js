@@ -22,4 +22,9 @@ const getJoke = (arr) => {
   return `Here's a joke to keep you going: ${arr[randIndx]}`;
 };
 
+const getEnergyLevel = (arr) => {
+  let randIndx = Math.floor(Math.random() * arr.length - 1);
+  return `Your energy level is: ${arr[randIndx]}`;
+};
+
 getJoke(dadJokes);
