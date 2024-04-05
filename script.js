@@ -27,4 +27,9 @@ const getEnergyLevel = (arr) => {
   return `Your energy level is: ${arr[randIndx]}`;
 };
 
+const getAdvice = (arr) => {
+  let randIndx = Math.floor(Math.random() * arr.length - 1);
+  return `You should: ${arr[randIndx]}`;
+};
+
 getJoke(dadJokes);
